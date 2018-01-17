@@ -1,12 +1,7 @@
 package client;
 
-import gui.ChatPage;
-import gui.LoginPage;
+import client.gui.LoginPage;
 import javax.swing.*;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.net.*;
 
 /**
  * Created by Hamed-Abbaszadeh on 1/11/2018.
@@ -30,21 +25,6 @@ public class Client
     }
     public static void main(String[] args) throws InterruptedException
     {
-        Client client = new Client();
-
-       /*try(Socket socket = client.loginPage.getClientSocket();
-           DataInputStream in = new DataInputStream(socket.getInputStream());
-           DataOutputStream out= new DataOutputStream(socket.getOutputStream()))
-        {
-            new Thread(new Reader(in)).start();
-            new Thread(new Writer(out,client.chatPage.getMessageTxt())).start();
-        } catch (UnknownHostException e)
-        {
-            e.printStackTrace();
-        } catch (IOException e)
-        {
-            e.printStackTrace();
-        }*/
-
+        new Client();
     }
 }
