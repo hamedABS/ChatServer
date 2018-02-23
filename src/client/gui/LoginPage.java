@@ -87,7 +87,8 @@ public class LoginPage extends JPanel
             byte[] buffIn = new byte[128];
 
             DatagramSocket socket= new DatagramSocket();
-            DatagramPacket packet = new DatagramPacket(buffOut,buffOut.length, InetAddress.getLocalHost(),
+            System.out.println(InetAddress.getByName(serverIp.getText()));
+            DatagramPacket packet = new DatagramPacket(buffOut,buffOut.length, InetAddress.getByName(serverIp.getText()),
                     Integer.parseInt(serverPort.getText()));
             DatagramPacket packet2 = new DatagramPacket(buffIn,buffIn.length);
             socket.send(packet);

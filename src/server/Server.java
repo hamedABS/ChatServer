@@ -8,7 +8,7 @@ public class Server
 {
     ServerSocket serverSocket;
     HashMap<Account , Connection> clientsSockets =new HashMap<>();
-    Account[] accounts = new Account[3];
+    Account[] accounts = new Account[6];
     Socket client1;
     Socket client2;
     DatagramPacket packet =null;
@@ -123,6 +123,9 @@ public class Server
         accounts[0] = new Account("hamed", "hamed");
         accounts[1] = new Account("hani", "hani");
         accounts[2] = new Account("sina", "sina");
+        accounts[3] = new Account("nader", "nader");
+        accounts[4] = new Account("babak", "babak");
+        accounts[5] = new Account("ahmad", "ahmad");
     }
 
     public void list()
